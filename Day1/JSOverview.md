@@ -87,7 +87,27 @@ console.log("Screen width is" + screen.width)l
 ```
 
 
+## ⭐️ Is JavaScript Synchronous or Asynchronous?
 
+ JavaScript is a synchronous, blocking, single-threaded language. Meaning that only one operation can be executed at a time. 
+
+ ![JSThreadCalling](/Day1/assets/jsCall.png)
+
+
+Luckily, there are ways to make JS asynchronous, which comes in hand when you don't want to block the user from interacting with the interface while the program is waiting for a function to complete.
+
+```
+console.log(1);
+console.log(2);
+setTimeout(function(){
+    console.log(3);
+}, 2000)
+console.log(4);
+
+```
+What do you think will happen? 
+The program will print 1,2,3,4? ***No***
+SetTimeout is asynchronous, so it will not block the execution. Therefore, the program will print 1,2,4, **(after 2 seconds)** 3. 
 
 
 

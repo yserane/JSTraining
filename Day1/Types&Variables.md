@@ -78,12 +78,128 @@ Var is old, let and cont were introduced to js in 2015.
 
 ### ⚪️ Scope
 
+```
+    function newFunction() {
+        var hello = "hello";
+    }
+   console.log(hello); // error: hello is not defined
+
+```
+
+```
+    function newFunction() {
+        let hello = "hello";
+    }
+   console.log(hello); // error: hello is not defined
+
+```
+
+```
+    function newFunction() {
+        let value = 4;
+        if (value > 4){
+        cont newValue = 5.5;
+        }
+        console.log(newValue); // error: newValue is not defined
+
+    }
+
+```
+
 
 ### ⚪️ Hoisting
+Hoisting is the abillity to define a variable before it's decarled
+
+**This works with**
+```
+x = 8; 
+
+console.log(x);
+
+var x;
+
+```
+
+**This DOESN'T works with let and const**
+```
+x = 8; 
+
+console.log(x);
+
+const x;
+
+```
+```
+x = 8; 
+
+console.log(x);
+
+const x;
+
+```
 
 ### ⚪️ Reassign
+Reassign a value to a variable.
+**This works with var and let**
+```
+var color = "yellow"; 
+color = "red"
+console.log(color); // will print red
+
+```
+
+```
+let color = "yellow"; 
+color = "red"
+console.log(color); // will print red
+
+```
+
+**This DOESN'T works with const**
+```
+const COLOR = "Yellow";
+COLOR = "Red";
+console.log(COLOR); // error
+```
 
 ### ⚪️ Redecalre
+declare the variable again.
+**This works with var**
+```
+var color = "yellow"; 
+var color = "red"
+console.log(color); // will print red
+
+```
+
+
+**This DOESN'T works with let and const**
+
+```
+let color = "yellow"; 
+let color = "red" // error
+
+```
+```
+const COLOR = "Yellow";
+const COLOR = "Red"; //error
+```
+
+### 🔴 A serious problem with var
+
+if you declared a variable somewhere, then you go and declare it again, it will override that value and loose the first one. 
+This will make it harder to developer to debug. 
+
+```
+ var greeter = "hi";
+	var times = 4;
+	if (times > 3) {
+    	var greeter = "hello";
+	}
+   console.log(greeter) // will print hello and hi is lost!
+
+```
+
 
 
 
