@@ -41,7 +41,9 @@
 * Object :  
     - contain multiple primitive data types
     - The named values, in JavaScript objects, are called **properties**.
-    - The named functions, in JavaScript objects, are called **methods**.
+    - The named functions, in JavaScript objects, are called 
+    **methods**.
+    - Access using dot or brackets
 
 ```
         let person = {
@@ -52,6 +54,9 @@
                 console.log("Food")l
             }
         };
+        console.log(person.name);
+        console.log(person["name"]);
+
 ```
 * Array  ```
         let countries = ["Palestine", "UAE", "Jordan"];
@@ -66,6 +71,19 @@
 ```
 
 ## ⭐️ Var vs Let vs Const
+
+Var is old, let and cont were introduced to js in 2015. 
+
+![GSG](/Day1/assets/varvsletvsconst.png)
+
+### ⚪️ Scope
+
+
+### ⚪️ Hoisting
+
+### ⚪️ Reassign
+
+### ⚪️ Redecalre
 
 
 
