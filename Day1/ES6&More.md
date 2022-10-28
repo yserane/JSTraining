@@ -1,4 +1,4 @@
-# JS Perks & ES2015/ES6 &
+# Rest vs Spread Operators & ES2015/ES6 
 #### Learn about features in JS and enhancments in ES6
 
 
