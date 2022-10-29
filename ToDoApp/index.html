@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>My first TODO app</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="JavaScript, ToDO">
+    <link rel="stylesheet" href="stylecheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="app-header">
+                <img src="assets/notes.png" alt="notes icon">
+                <h1 class="app-title">Todos</h1>
+            </div>
+            <span class="sub-title">What tasks do you need to accomplish today?</span>
+
+            <div class="js-form">
+                <input autofocus type="text" onkeydown="addByEnter(event)" aria-label="Enter a new todo item"
+                    placeholder="E.g. Build a todo app" class="js-todo-input" id="new-task">
+                <input id="js-submit" class="submit-button" aria-label="Click button to submit a task" type="button"
+                    value="Add Task" onclick="addNewTask()">
+            </div>
+            <ul class="todo-list js-todo-list"></ul>
+        </div>
+    </main>
+
+</body>
+<script rel="text/javascript" src="todo.js"></script>
+
+
+</html>
