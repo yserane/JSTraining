@@ -108,13 +108,36 @@ console.log(apps.length) //3
         price: 200,
     }];
     let delivery = 20;
- let mapGifts = gifts.filter(function(gift){
+ let mapGifts = gifts.map(function(gift){
     return gift.price + 20 ;
 
  }); // we will get a new array with prices added 20
 
  ```
 
+### Reduce
+* iterates through an array
+* The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place
+* Runs a callback on each value in the array with the returned value from the calculation on the preceding element.
+* Returns a single value
+
+
+![filter](/Day1/assets/reduce.png)
+ ```
+
+let gifts = [20,150,30,4]
+
+    let reduceGifts = gifts.reduce(function(a,b){
+        console.log("First Value " + a);
+        console.log("Second Value " + b);
+
+        return a+b;
+
+    },20);
+
+    console.log(reduceGifts);
+
+ ```
 ### Every
 * iterates through an array
 * Runs a callback on each value in the array
@@ -141,81 +164,12 @@ console.log(apps.length) //3
         price: 200,
     }];
     let delivery = 20;
- let isPriceLow = gifts.filter(function(gift){
+ let isPriceLow = gifts.every(function(gift){
     return gift.price < 250 ;
 
  }); // isPriceLow = true; the array passed the test case. 
 
  ```
-### Map
-* Creates a new array
-* iterates through an array
-* Runs a callback on each value in the array
-* Adds the results of that callback functions to the new array
-* Returns the new array
-* ALWAYS returns a new array of the SAME length
-
-![filter](/Day1/assets/map.png)
- ```
- let gifts = [
-    {
-        name:"watch",
-        price: 150,
-    },
-     {
-        name:"mug",
-        price: 20,
-    },
-     {
-        name:"rose",
-        price: 1,
-    },
-     {
-        name:"necklace",
-        price: 200,
-    }];
-    let delivery = 20;
- let mapGifts = gifts.filter(function(gift){
-    return gift.price + 20 ;
-
- }); // we will get a new array with prices added 20
-
- ```
-
-### Reduce
-* iterates through an array
-* The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place
-* Runs a callback on each value in the array with the returned value from the calculation on the preceding element.
-* Returns a single value
-
-
-![filter](/Day1/assets/reduce.png)
- ```
- let gifts = [
-    {
-        name:"watch",
-        price: 150,
-    },
-     {
-        name:"mug",
-        price: 20,
-    },
-     {
-        name:"rose",
-        price: 1,
-    },
-     {
-        name:"necklace",
-        price: 200,
-    }];
-    let delivery = 20;
- let allPricesWithDelivery = gifts.reduce(function(previousValue, currentValue){
-    return previousValue.price + currentValue.price ;
-
- }, 20); // allPricesWithDelivery = sum of all element + 20 = 391
-
- ```
-
 
 ### Some
 * iterates through an array
@@ -243,7 +197,7 @@ console.log(apps.length) //3
         price: 200,
     }];
     let delivery = 20;
- let isPriceLow = gifts.filter(function(gift){
+ let isPriceLow = gifts.sine(function(gift){
     return gift.price < 50 ;
 
  }); // isPriceLow = true; because two elements are less than 50. 

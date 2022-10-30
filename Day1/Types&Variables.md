@@ -63,7 +63,7 @@
         ```
 * Function 
  ```
-        let sum = function(a + b) 
+        let sum = function(a , b) 
         {
             return a + b;
         };
@@ -84,6 +84,15 @@ Var is old, let and cont were introduced to js in 2015.
     }
    console.log(hello); // error: hello is not defined
 
+    function newFunction() {
+        var word = "hello";
+        if(true){
+                var word = "Fun"; //works without any error as scope is different.
+                console.log(word) //prints "Fun"
+        }
+        console.log(word) //prints "Fun"
+}
+
 ```
 
 ```
@@ -91,6 +100,16 @@ Var is old, let and cont were introduced to js in 2015.
         let hello = "hello";
     }
    console.log(hello); // error: hello is not defined
+
+
+        function newFunction() {
+        let word = "hello";
+        if(true){
+                let word = "Fun"; //works without any error as scope is different.
+                console.log(word) //prints "Fun"
+        }
+        console.log(word) //prints "Hello"
+        }
 
 ```
 

@@ -126,6 +126,6 @@ let person = {    // Object we want to destructure
 // Destructuring the object into variables with
 // different names than the object variables
 var { firstname: fn, lastname: ln, dateofbirth: dob } = person;
-console.log( fn, ln, dob);console.log(name, age);
+console.log( fn, ln, dob);
 ```
 
